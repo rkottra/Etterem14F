@@ -7,6 +7,8 @@ import { FejlecComponent } from './fejlec/fejlec.component';
 import { FooldalComponent } from './fooldal/fooldal.component';
 import { KapcsolatComponent } from './kapcsolat/kapcsolat.component';
 import { EtlapComponent } from './etlap/etlap.component';
+import { AdminComponent } from './admin/admin.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,10 +16,12 @@ import { EtlapComponent } from './etlap/etlap.component';
     FejlecComponent,
     FooldalComponent,
     KapcsolatComponent,
-    EtlapComponent
+    EtlapComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

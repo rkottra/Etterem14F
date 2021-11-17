@@ -1,8 +1,14 @@
-table {
-    width:100%;
+div {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 10px;
+    padding: 15px;
+    border:  1px solid black;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px 5px lightgray;
 }
 
-td {
-    width: 50%;
-    border: 1px solid black;
+div > img {
+    max-width: 100%;
 }
