@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-etlap',
@@ -43,7 +44,15 @@ export class EtlapComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  public etelid:number = -1;
+
+  constructor( private route: ActivatedRoute) { 
+    
+    this.route.params.subscribe( params => {
+      if (params.id > -1)
+        this.etelid = params.id;
+    });
+  }
 
   ngOnInit(): void {
   }

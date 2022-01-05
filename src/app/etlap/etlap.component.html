@@ -1,8 +1,29 @@
 
 <h1>{{Cim}}</h1>
 
-<div *ngFor="let etel of etlap">
-    <b>{{etel.Kajanev}}</b>
-    <br />
-    <img src="{{etel.Url}}"/>
-</div>
+<span *ngIf="etelid == -1">
+
+    <div *ngFor="let etel of etlap; index as i">
+       
+        <a class="nav-link" [routerLink]="['/etlap/'+i]" >
+            <b>{{etel.Kajanev}}</b>
+        </a>
+
+        <br />
+        <img src="{{etel.Url}}"/>
+    </div>
+
+</span>
+
+<span *ngIf="etelid > -1">
+
+    <div>
+        <b>{{etlap[etelid].Kajanev}}</b>
+        <br />
+        <img src="{{etlap[etelid].Url}}"/>
+    </div>
+    
+    <a class="nav-link" [routerLink]="['/etlap']" >
+        Vissza az étlapra
+    </a>
+</span>
